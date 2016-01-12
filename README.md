@@ -49,4 +49,3 @@ Then return to the command line and, from within the project directory, just ent
 We have lots of informative guides, videos, live help, documentation, and even a book on how to use Moovweb. You should be able to get up and running in 30 minutes if you visit [developer.moovweb.com](http://developer.moovweb.com).
 
 You might find [the page about the scripts folder](http://developer.moovweb.com/docs/local/project_files) useful for starting to write Tritium, and our [documents on the stylesheets folder](http://developer.moovweb.com/docs/local/project_files/stylesheet) for information on how we structure our stylesheets.
-# moovweb_training_igadget
