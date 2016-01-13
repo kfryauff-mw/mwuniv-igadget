@@ -27,4 +27,10 @@ match($status) {
     else() {
     }
   }
+  match($path) {
+    with(/sample-product/) {
+      log("--> Importing pages/product.ts in mappings.ts")
+      @import pages/product.ts
+    }
+  }
 }

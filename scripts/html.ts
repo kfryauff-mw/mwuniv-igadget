@@ -6,10 +6,10 @@ $("/html") {
   absolutize()
   rewrite_aspnet_scripts()
   clean_mobile_meta_tags()
-  #remove_all_styles()
-  #remove_internal_styles()
+  remove_all_styles()
+  remove_internal_styles()
 
-  #add_assets()
+  add_assets()
 
   @import "sections/header.ts"
   @import "sections/footer.ts"
