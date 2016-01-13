@@ -13,7 +13,16 @@
 match($status) {
   match($page_type) {
     with(/^home$/) {
+      log("--> Home Page Load")
       @import pages/home.ts
+    }
+    else() {
+    }
+  }
+  match($path) {
+    with(/shop/){
+      log("--> Importing pages/category.ts in mappings.ts")
+      @import pages/category.ts
     }
     else() {
     }
