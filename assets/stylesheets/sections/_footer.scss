@@ -1,3 +1,16 @@
 .mw-footer {
+  @include background($header_bg);
 
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+
+  padding: 10px;
+
+  font-size: 13px;
+
+  .mv-pwrdby {
+    padding-bottom: 10px;
+    text-align: right;
+    font-size: 12px;
+  }
 }

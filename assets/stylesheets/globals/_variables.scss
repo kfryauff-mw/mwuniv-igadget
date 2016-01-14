@@ -51,6 +51,9 @@ $h1_size:                 $base_font_size + 9px;
 $h2_size:                 $base_font_size + 6px;
 $h3_size:                 $base_font_size + 3px;
 
+$header_bg: linear-gradient(#C14102 0, shade(#C14102, 20%) 100%);
+$search_bg: linear-gradient(#852201 0, shade(#C14102, 50%) 100%);
+
 // Borders
 // -------
 $border_color:            $gray_input;
