@@ -7,7 +7,7 @@ $content_type = inferred_content_type()
 
 match($content_type) {
   with(/html/) {
-    
+
     protect_xmlns()
 
     # Force UTF-8 encoding. If you'd like to auto-detect the encoding,
@@ -19,12 +19,15 @@ match($content_type) {
     restore_xmlns()
     restore_dollar_sign()
   }
-  with(/ajax/) {
+  
+  with(/ajax|javascript|application\/json|text\/html/) {
      html_fragment() {
+      log("--> Importing ajax.ts in main.ts")
       @import ajax.ts
     }
   }
-  
+
+
   with(/text\/plain/) {
     match($path, /^\/.+?\.aspx/) {
       @import "aspnet.ts"

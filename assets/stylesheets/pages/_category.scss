@@ -17,6 +17,16 @@ body._category {
           &[data-ur-state="enabled"] {
             border-bottom-left-radius: 0;
             border-bottom-right-radius: 0;
+            > .mw_indicator {
+              @extend .sprites-minus;
+              float: right;
+            }
+          }
+          &[data-ur-state="disabled"] {
+            > .mw_indicator {
+              @extend .sprites-plus;
+              float: right;
+            }
           }
         }
         div {
@@ -39,7 +49,8 @@ body._category {
                 border-bottom: 0;
 
                 color: black;
-                .mw_arraw {
+                .mw_arrow {
+                  @include sprites-menu_go;
                   float: right;
                 }
               }
@@ -55,28 +66,31 @@ body._category {
       }
     } // End .Left
 
-    #CategoryHeading {
-      font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
-      form {
-        background-color: $mat_deep_red;
-        border-radius: 5px;
-        padding: 15px;
-        margin-bottom: 0;
-        font-size: 14px;
-        color: white;
-        & > *  {
-          display: inline-block;
-        }
-        span {
-          width: 25%;
-        }
-        select {
-          width: 75%;
-          height: 20px;
+    .Content {
+      #CategoryHeading {
+        font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+        form {
+          background-color: $mat_deep_red;
+          border-radius: 5px;
+          padding: 15px;
           margin-bottom: 0;
+          font-size: 14px;
+          color: white;
+          & > *  {
+            display: inline-block;
+          }
+          span {
+            width: 25%;
+          }
+          select {
+            width: 75%;
+            height: 20px;
+            margin-bottom: 0;
+          }
         }
-      }
-    }
+      } // End #CategoryHeading
+    } // End .Content
+
 
   } //End #Wrapper
 
