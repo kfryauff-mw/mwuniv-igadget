@@ -1,0 +1,83 @@
+body._category {
+  h2 {
+
+  }
+  #Wrapper {
+    padding: 0 10px;
+    .Left {
+      font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+      #SideShopByBrand, #SideCategoryShopByPrice {
+        h2 {
+          background-color: $mat_deep_red;
+          border-radius: 5px;
+          padding: 15px;
+          margin-bottom: 0;
+          font-size: 14px;
+          color: white;
+          &[data-ur-state="enabled"] {
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: 0;
+          }
+        }
+        div {
+          ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            li {
+              position: relative;
+              margin: 0;
+              padding: 0;
+
+              a {
+                width: 100%;
+                display: block;
+                padding: 10px 12px;
+
+                border: 1px solid $mat_deep_red;
+                background-color: $mat_yellow;
+                border-bottom: 0;
+
+                color: black;
+                .mw_arraw {
+                  float: right;
+                }
+              }
+              &:last-of-type a {
+                border-bottom: 1px solid $mat_deep_red;
+                border-bottom-left-radius: 5px;
+                border-bottom-right-radius: 5px;
+              }
+            }
+          }
+
+        }
+      }
+    } // End .Left
+
+    #CategoryHeading {
+      font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+      form {
+        background-color: $mat_deep_red;
+        border-radius: 5px;
+        padding: 15px;
+        margin-bottom: 0;
+        font-size: 14px;
+        color: white;
+        & > *  {
+          display: inline-block;
+        }
+        span {
+          width: 25%;
+        }
+        select {
+          width: 75%;
+          height: 20px;
+          margin-bottom: 0;
+        }
+      }
+    }
+
+  } //End #Wrapper
+
+}

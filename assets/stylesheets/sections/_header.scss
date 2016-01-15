@@ -1,6 +1,6 @@
 #Header {
   border-top: 1px solid black;
-  // @include background(linear-gradient(#C14102 0, shade(#C14102, 20%) 100%));
+  @include background($header_bg);
   #Logo {
     @include background($header_bg);
     padding-bottom: 10px;
@@ -19,7 +19,7 @@
     #LogoContainer {
       width: 65%;
       display: inline-block;
-    }
+    } // End of #LogoContainer
 
     #TopMenu {
       text-align: center;
@@ -44,8 +44,9 @@
           }
         }
       }
-    }
-  }
+    } // End of #TopMenu
+  } // End of #Logo
+
   .mw_header_bottom {
     width: 100%;
     display: block;
@@ -71,8 +72,12 @@
         position: absolute;
         top: 0;
         right: -13px;
+        input {
+          height: 33px;
+          width: 40px;
+        }
       }
-    }
+    } // End of .mw_search
     .mw_menu_btn {
       float: right;
       display: block;
@@ -80,5 +85,5 @@
         @extend .sprites-menu-on;
       }
     }
-  }
+  } // End of .mw_header_bottom
 }
