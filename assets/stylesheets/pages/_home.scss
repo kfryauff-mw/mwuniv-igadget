@@ -4,6 +4,61 @@
 
 }
 
+.vert_align_helper {
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+}
+
 body._home {
-  
+  [data-ur-set="carousel"] {
+    overflow: hidden;
+    position: relative;
+  }
+  [data-ur-carousel-component="scroll_container"] {
+    position: relative;
+  }
+  [data-ur-carousel-component="item"] {
+    float: left;
+  }
+
+  #Wrapper {
+    .Content {
+      h2 {
+        text-align: center;
+        font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+        font-weight: normal;
+      }
+
+
+
+      ul.ProductList {
+        list-style-type: none;
+        position: relative;
+        margin: 0;
+        padding: 5px;
+        li {
+          margin: 0;
+          padding: 10px 0px;
+          float: left;
+          padding: 0 2px 2px;
+          .ProductImage {
+            text-align: center;
+            margin: auto auto;
+            white-space: nowrap;
+            a {
+              width: 100%;
+              height: 100%;
+              text-decoration: none;
+              img {
+                margin: auto ;
+                vertical-align: middle;
+              }
+            }
+
+          }
+        }
+      }
+    }
+  }
 }
