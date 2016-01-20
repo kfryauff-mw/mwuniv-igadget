@@ -13,35 +13,3 @@
   color: white;
   width: 100%;
 }
-
-// Custom Global Classes
-#Wrapper {
-  padding: 0 10px;
-
-  .ProductActionAdd {
-    padding: 10px 0;
-    font-weight: normal;
-    width: 100%;
-    position: relative;
-    text-align: center;
-    font-size: 12px;
-    a {
-      @include button_base;
-      width: auto;
-      display: block;
-
-    }
-  }
-}
-
-// Hacky fix for QuickViewBtn
-.QuickViewBtn, #fancy_outer, #fancy_overlay, #fancy_loading, #fancy_title {
-  display:none;
-  opacity: 0;
-  pointer-events: none;
-}
-
-// For Testing Purposes Only
-.temp {
-  border: 2px red solid !important;
-}

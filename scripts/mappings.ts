@@ -24,13 +24,11 @@ match($status) {
       log("--> Importing pages/category.ts in mappings.ts")
       @import pages/category.ts
     }
-    else() {
-    }
-  }
-  match($path) {
     with(/sample-product/) {
       log("--> Importing pages/product.ts in mappings.ts")
       @import pages/product.ts
+    }
+    else() {
     }
   }
 }

@@ -21,7 +21,7 @@ body._product {
           display: inline;
         }
       }
-    }
+    } // End .ProductDetailsGrid
 
     form#productDetailsAddToCartForm {
       .ProductDetailsGrid {
@@ -36,8 +36,3 @@ body._product {
   } //End .ProductMain
 
 } // End body._product
-
-#ModalOverlay, #ModalContainer {
-  opacity: 0;
-  pointer-events: none;
-}
