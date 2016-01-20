@@ -16,3 +16,31 @@
 // Pages
 @import "pages/home";
 @import "pages/category";
+@import "pages/product";
+
+
+.ProductActionAdd {
+  padding: 10px 0;
+  font-weight: normal;
+  width: 100%;
+  position: relative;
+  text-align: center;
+  a {
+    @include button_base;
+    width: auto;
+    display: block;
+
+  }
+}
+
+.QuickViewBtn {
+  display:none;
+}
+
+#Wrapper {
+  padding: 0 10px;
+}
+
+.temp {
+  border: 2px red solid;
+}

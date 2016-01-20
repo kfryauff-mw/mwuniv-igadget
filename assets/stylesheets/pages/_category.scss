@@ -3,17 +3,13 @@ body._category {
 
   }
   #Wrapper {
-    padding: 0 10px;
     .Left {
       font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
       #SideShopByBrand, #SideCategoryShopByPrice {
         h2 {
-          background-color: $mat_deep_red;
-          border-radius: 5px;
+          @include button_base;
+          margin: 10px 0 0;
           padding: 15px;
-          margin-bottom: 0;
-          font-size: 14px;
-          color: white;
           &[data-ur-state="enabled"] {
             border-bottom-left-radius: 0;
             border-bottom-right-radius: 0;
@@ -21,14 +17,14 @@ body._category {
               @extend .sprites-minus;
               float: right;
             }
-          }
-          &[data-ur-state="disabled"] {
+          } // End &[data-ur-state="enabled"]
+          // &[data-ur-state="disabled"] {
             > .mw_indicator {
               @extend .sprites-plus;
               float: right;
             }
-          }
-        }
+          // } // End &[data-ur-state="disabled"]
+        } // End h2
         div {
           ul {
             list-style-type: none;
@@ -52,18 +48,17 @@ body._category {
                 .mw_arrow {
                   @include sprites-menu_go;
                   float: right;
-                }
-              }
+                } // End .mw_arrow
+              } // End a
               &:last-of-type a {
                 border-bottom: 1px solid $mat_deep_red;
                 border-bottom-left-radius: 5px;
                 border-bottom-right-radius: 5px;
-              }
-            }
-          }
-
-        }
-      }
+              } // End &:last-of-type a
+            } // End li
+          } // End ul
+        } // End div
+      } // End #SideShopByBrand, #SideCategoryShopByPrice
     } // End .Left
 
     .Content {
@@ -73,23 +68,76 @@ body._category {
           background-color: $mat_deep_red;
           border-radius: 5px;
           padding: 15px;
+          margin-top: 10px;
           margin-bottom: 0;
           font-size: 14px;
           color: white;
           & > *  {
             display: inline-block;
-          }
+          } // End * All Children of form
           span {
             width: 25%;
-          }
+          } // End span
           select {
             width: 75%;
             height: 20px;
             margin-bottom: 0;
+          } // End select
+        } // End form
+      } // End #CategoryHeading
+
+      #CategoryContent {
+        font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+        ul.ProductList {
+          list-style-type: none;
+          padding-left: 0;
+          li {
+            background-color: $gray_light;
+            // padding: 10px;
+            margin: 5px 0;
+            // height: 160px;
+            display: flex;
+            align-items: stretch;
+            .ProductImage {
+            // display: inline-block;
+              padding: 5px;
+              margin: auto 0;
+              a {
+                margin: auto 0;
+              }
+            }
+            .ProductSummary {
+              padding: 15px 10px 10px 15px;
+              height: auto;
+              flex-grow: 1;
+              .ProductDetails {
+                a {
+                  color: black;
+                  font-size: 12px;
+                }
+                overflow: wrap;
+
+              }
+              .ProductPriceRating {
+                em {
+                  color: red;
+                  width: 100%;
+                  display: block;
+                  font-style: normal;
+                  font-size: 13px;
+                }
+
+              }
+              .ProductActionAdd {
+                height: auto;
+                padding: 0;
+              }
+            }
           }
         }
-      } // End #CategoryHeading
+      } // End #CategoryContent
     } // End .Content
+
 
 
   } //End #Wrapper

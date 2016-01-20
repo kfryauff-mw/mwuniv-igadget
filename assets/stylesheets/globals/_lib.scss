@@ -3,3 +3,13 @@
 @import "lib/boxes";
 @import "lib/button";
 @import "lib/forms";
+
+@mixin button_base {
+  background-color: $mat_deep_red;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px 0;
+  font-size: 14px;
+  color: white;
+  width: 100%;
+}

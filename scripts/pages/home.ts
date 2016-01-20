@@ -12,37 +12,32 @@ $$("body") {
         remove("./span")
       }
       $(".//ul[@class='ProductList']") {
-        wrap("div", data-ur-set: "carousel", data-ur-fill: "2.5")
+        wrap("div", data-ur-set: "carousel", data-ur-fill: "2", data-ur-infinite: "disabled", data-ur-center: "disabled")
         # wrap("div", data-ur-carousel-component: "scroll_container")
         attribute("data-ur-carousel-component", "scroll_container")
         $("./li") {
           attribute("data-ur-carousel-component", "item")
           attribute("alt", index())
-          $(".//div[contains(@class='ProductImage'])") {
-            // $("./a") {
-            //   insert_at("top", "span", class: "vert_align_helper")
-            // }
+          attribute("style", "max-width: 160px;")
+
+          $(".//div[contains(@class, 'ProductImage')]") {
+
+
+            // remove('@style')
+            // log('style =',fetch('@style'));
+
+            // **** TODO: Remove QuickViewBtn ****
+            $(".//div[@class='QuickViewBtn']") {
+              inner("to delete")
+            }
+            remove(".//div[contains(@class, 'QuickViewBtn')]")
           }
+
         }
         $("parent::node()") {
-          insert_at("top", "a", "Next", data-ur-carousel-component: "button", data-ur-carousel-button-type: "next")
-          insert_at("top", "   /    ")
-          insert_at("top", "a", "Prev", data-ur-carousel-component: "button", data-ur-carousel-button-type: "prev")
           insert_at("bottom", "div", class: "dots", data-ur-carousel-component: "dots")
         }
       }
     }
-
-    // insert("div", data-ur-set: "carousel") {
-    //   insert("span", data-ur-carousel-component: "count")
-    //   insert("a", "Prev", data-ur-carousel-component: "button", data-ur-carousel-button-type: "prev")
-    //   insert("a", "Next", data-ur-carousel-component: "button", data-ur-carousel-button-type: "next")
-    //   insert("div", data-ur-carousel-component: "scroll_container") {
-    //     insert("img", data-ur-carousel-component: "item", src: "http://placehold.it/150x210", alt: "1")
-    //     insert("img", data-ur-carousel-component: "item", src: "http://placehold.it/150x210", alt: "2")
-    //     insert("img", data-ur-carousel-component: "item", src: "http://placehold.it/150x210", alt: "3")
-    //     insert("img", data-ur-carousel-component: "item", src: "http://placehold.it/150x210", alt: "4")
-    //   }
-    // }
   }
 }

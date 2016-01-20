@@ -86,4 +86,32 @@
       }
     }
   } // End of .mw_header_bottom
-}
+
+  #Menu {
+    #SideCategoryList {
+      border-top: 1px solid $mat_deep_red;
+      h2 {
+        color: white;
+        @include background($search_bg);
+        font-weight: normal;
+        font-size: 18px;
+        margin: 0;
+        padding: 15px;
+      }
+    }
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      li {
+        border-top: 1px solid $mat_deep_red;
+        a {
+            color: white;
+            padding: 10px 20px;
+            width: auto;
+            display: block;
+        }
+      }
+    }
+  }
+} // End of #Header
