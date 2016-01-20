@@ -29,19 +29,17 @@ body._home {
         font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
         font-weight: normal;
       }
-      .BlockContent > div {
-        text-align: center;
-      }
       ul.ProductList {
         list-style-type: none;
         position: relative;
         margin: 0;
         padding: 5px;
         li {
-          margin: 5px;
+          // margin: 5px;
           float: left;
           padding: 10px 5px;
           overflow: hidden;
+          position: relative;
           .ProductImage {
             text-align: center;
             margin: auto auto;
@@ -54,21 +52,38 @@ body._home {
                 vertical-align: middle;
               }
             }
-          }
+          } // End .ProductImage
+
           .ProductDetails  {
             a {
               font-size: 12px;
               text-decoration: none;
               color: black;
             }
-          }
+          } // End .ProductDetails
 
-          .ProductPriceRating > em {
+          .ProductPriceRating {
             font-style: normal;
-          }
+            padding-bottom: 90px;
+            em {
+              font-style: normal;
+              font-size: 13px;
+            }
+          } // End .ProductPriceRating
 
-         }
-      }
-    }
-  }
-}
+          .ProductActionAdd {
+            position: absolute;
+            bottom: 0px;
+            left: 2px;
+            right: 2px;
+            width: auto;
+          } // End .ProductActionAdd
+
+          &.carousel_fix {
+            min-width: 150px;
+          } // End li.carousel_fix
+        }  // End li
+      } // End ul.ProductList
+    } // End .Content
+  } // End #Wrapper
+} // End body._home

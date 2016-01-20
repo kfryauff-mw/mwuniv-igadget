@@ -1,12 +1,15 @@
 $("./body"){
   add_class("_category");
   remove(".//div[@id='CategoryBreadcrumb']")
-    remove(".//div[@class='Right']")
+  remove(".//div[@class='Right']")
 
   $(".//div[@id='Wrapper']") {
     $("./div[@class='Left']") {
+      $("./div[not(contains(@style, 'display:none')) and (@id='SideShopByBrand' or @id='SideCategoryShopByPrice')]") {
 
-      $("./div[@id='SideShopByBrand' or @id='SideCategoryShopByPrice']") {
+        $style = fetch("@style")
+        log("style: ", $style)
+
         attribute("data-ur-set", "toggler")
 
         $(".//h2") {
@@ -56,16 +59,6 @@ $("./body"){
           $("./div[not(contains(@class, 'ProductSummary') or contains(@class, 'ProductImage'))]") {
             move_to("../div[@class='ProductSummary']")
           } # End not(div.ProductSummary || div.ProductImage
-
-          $("./div[@class='ProductSummary']") {
-            // insert_at("top", "div", class: "ProductDetails mw_pd")
-            // $("./div[@class='ProductDetails']") {
-            //   $("./strong") {
-            //     move_to("../../div[@class='ProductDetails mw_pd']")
-            //   }
-            //   remove();
-            // }
-          }
         } # End li
       } # End div#CategoryContent
     } # End div.Content

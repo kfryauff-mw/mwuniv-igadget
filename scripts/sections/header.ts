@@ -64,15 +64,4 @@ $(".//div[@id='Header']") {
     }
   } // End #Menu scope
 
-  // insert("div", data-ur-set: "toggler") {
-  //   insert("div", data-ur-toggler-component: "button"){
-  //     inner("Click Here!")
-  //   }
-  //   insert("ul", data-ur-toggler-component: "content"){
-  //     insert("li") { inner("Hat") }
-  //     insert("li") { inner("Hat") }
-  //     insert("li") { inner("Hat") }
-  //   }
-  // }
-
-}
+} // End #Header
