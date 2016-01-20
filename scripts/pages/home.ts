@@ -18,6 +18,7 @@ $$("body") {
         $("./li") {
           attribute("data-ur-carousel-component", "item")
           attribute("alt", index())
+          // Hacky fix for carousel
           attribute("style", "max-width: 160px;")
 
           $(".//div[contains(@class, 'ProductImage')]") {
@@ -27,10 +28,10 @@ $$("body") {
             // log('style =',fetch('@style'));
 
             // **** TODO: Remove QuickViewBtn ****
-            $(".//div[@class='QuickViewBtn']") {
-              inner("to delete")
-            }
-            remove(".//div[contains(@class, 'QuickViewBtn')]")
+            // $(".//div[@class='QuickViewBtn']") {
+            //   inner("to delete")
+            // }
+            // remove(".//div[contains(@class, 'QuickViewBtn')]")
           }
 
         }
