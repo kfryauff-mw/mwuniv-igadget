@@ -33,8 +33,10 @@
   }
 }
 
-.QuickViewBtn {
+.QuickViewBtn, #fancy_outer, #fancy_overlay, #fancy_loading, #fancy_title {
   display:none;
+  opacity: 0;
+  pointer-events: none;
 }
 
 #Wrapper {
